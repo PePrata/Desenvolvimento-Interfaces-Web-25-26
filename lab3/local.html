@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Iorque - Localização</title>
+    <link rel="stylesheet" href="NY.css" />
+    <style>
+        /* Container principal com flexbox */
+        .location-container {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin: 30px 0;
+            padding: 0 20px;
+        }
+
+        /* Secção de texto */
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .text-content h3 {
+            color: #003366;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .text-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .text-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .text-content ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .text-content ul li::before {
+            content: "📍";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Secção do mapa */
+        .map-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .map-content iframe {
+            width: 100%;
+            height: 450px;
+            border: 2px solid #003366;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Media Query para telemóveis */
+        @media (max-width: 768px) {
+            .location-container {
+                flex-direction: column;
+            }
+
+            .text-content {
+                order: 1;
+                width: 100%;
+            }
+
+            .map-content {
+                order: 2;
+                width: 100%;
+            }
+
+            .map-content iframe {
+                height: 350px;
+            }
+        }
+
+        /* Media Query para ecrãs muito pequenos */
+        @media (max-width: 480px) {
+            .location-container {
+                padding: 0 10px;
+                gap: 20px;
+            }
+
+            .map-content iframe {
+                height: 300px;
+            }
+
+            .text-content h3 {
+                font-size: 1.3em;
+            }
+        }
+
+        /* Estilo adicional para o main */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        main h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        main > p:first-of-type {
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nova Iorque</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="local.html">Localização</a></li>
+                <li><a href="multimedia.html">Multimédia</a></li>
+                <li><a href="info.html">Informações</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Localização</h2>
+        <p>A cidade de Nova Iorque está localizada no nordeste dos Estados Unidos.</p>
+        
+        <div class="location-container">
+            <div class="text-content">
+                <h3>Sobre a Localização</h3>
+                <p>Nova Iorque situa-se na costa atlântica dos Estados Unidos, no estado de Nova Iorque. É uma das cidades mais importantes do mundo, tanto a nível económico como cultural.</p>
+                
+                <h3>Distritos</h3>
+                <p>Nova Iorque tem cinco distritos principais:</p>
+                <ul>
+                    <li>Manhattan</li>
+                    <li>Brooklyn</li>
+                    <li>Queens</li>
+                    <li>Bronx</li>
+                    <li>Staten Island</li>
+                </ul>
+            </div>
+            
+            <div class="map-content">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113965.98371654331!2d-74.1066249459572!3d40.702703365009604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNova%20Iorque%2C%20NY%2C%20EUA!5e0!3m2!1spt-PT!2spt!4v1767476973057!5m2!1spt-PT!2spt" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>DIW 2025</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Iorque - Multimédia</title>
+    <link rel="stylesheet" href="NY.css"/>
+    <style>
+        .fotografias {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .fotografias img {
+            width: 120px;
+            border-radius: 6px;
+        }
+
+        .fotografias img:hover {
+            transform: scale(1.1);
+        }
+
+        .poema {
+            max-width: 500px;
+            margin: 20px auto;
+            font-style: italic;
+        }
+
+        .poema p {
+            margin: 4px 0;
+        }
+
+        .poema p:nth-child(odd) {
+            color: #003366;
+            font-weight: bold;
+        }
+
+        .poema p:nth-child(even) {
+            color: #08478f;
+        }
+
+        .poema p:nth-child(4n) {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nova Iorque</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="local.html">Localização</a></li>
+                <li><a href="multimedia.html">Multimédia</a></li>
+                <li><a href="info.html">Informações</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Multimédia</h2>
+        <h3>Imagem da Cidade</h3>
+        <img src="images/NYC.jpg" alt="Cidade de Nova Iorque">
+        <section>
+            <h3>Fotografias</h3>
+            <div class="fotografias">
+                <img src="images/statue.jpg" alt="Estátua da liberdade">
+                <img src="images/park.jpg" alt="Central Park">
+                <img src="images/centralPark2.jpg" alt="Central Park">
+                <img src="images/park3.jpg" alt="Central Park">
+                <img src="images/square.jpg" alt="Times Square">
+                <img src="images/square2.jpg" alt="Times Square">
+                <img src="images/bridge.jpg" alt="Ponte de Brooklyn">
+                <img src="images/bridge2.jpg" alt="Ponte de Brooklyn">
+            </div>
+        </section>
+        <iframe width="1513" height="563" src="https://www.youtube.com/embed/6WdlY2EVLKI" title="Ultimate New York Bucket List: 50 Must-Do Activities for 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <section>
+        <h3>Poesia</h3>
+
+        <div class="poema">
+            <p>Nova Iorque acorda em aço e luz,</p>
+            <p>um rio de gente cruza a manhã apressada.</p>
+            <p>Arranha-céus tocam nuvens sem pedir licença,</p>
+            <p>sonhos sobem de elevador, andar após andar.</p>
+            <p>O metrô canta histórias em vozes diferentes,</p>
+            <p>línguas do mundo se encontram no mesmo vagão.</p>
+            <p>Cada esquina guarda um começo possível,</p>
+            <p>cada passo carrega uma ambição.</p>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <p>DIW 2025</p>
+    </footer>
+</body>
+</html>

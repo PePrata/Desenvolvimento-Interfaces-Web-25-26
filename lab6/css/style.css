@@ -1,0 +1,174 @@
+
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+        header {
+            background-color: #7b1fa2;
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        section > h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        #produtos-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        article {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            width: 300px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        article h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            min-height: 60px;
+            color: #333;
+        }
+
+        article img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin: 0 auto 1rem auto;
+        }
+
+        article p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        .preco {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #333;
+            margin: 1rem 0;
+        }
+
+        .descricao {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #666;
+            line-height: 1.4;
+            min-height: 100px;
+            text-align: left;
+        }
+
+article button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+article button:hover {
+    background-color: #f0f0f0;
+}
+
+#cesto-section {
+    background-color: #7b1fa2;
+    color: white;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+}
+
+#cesto h2 {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+#cesto-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#cesto article {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+#cesto article button {
+    background-color: white;
+    border: 2px solid #d32f2f;
+    color: #d32f2f;
+}
+
+#cesto article button:hover {
+    background-color: #ffebee;
+}
+
+#total {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+ }
+
+footer {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: #666;
+}

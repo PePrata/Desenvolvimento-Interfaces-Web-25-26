@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PePrata - Web Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Navegação */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        /* Hero */
+        #hero {
+            height: 100vh;
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        .cta-button:hover {
+            background: #45a049;
+        }
+
+        /* Projetos */
+        #projetos {
+            min-height: 100vh;
+            background: #2c3e50;
+            padding: 100px 20px;
+        }
+
+        #projetos h2 {
+            color: white;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            width: 280px;
+            text-align: center;
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .project-card a {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .project-card a:hover {
+            background: #45a049;
+        }
+
+        /* Disciplina */
+        #disciplina {
+            min-height: 100vh;
+            background: #34495e;
+            padding: 100px 20px;
+        }
+
+        .disciplina-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        .disciplina-text {
+            flex: 1;
+        }
+
+        .disciplina-text h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .disciplina-text p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .disciplina-text ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .disciplina-text li {
+            color: #555;
+            padding: 8px 0;
+        }
+
+        .disciplina-text li::before {
+            content: "• ";
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .disciplina-image {
+            flex: 1;
+        }
+
+        .disciplina-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2em;
+            }
+
+            .hero-content p {
+                font-size: 1.2em;
+            }
+
+            .project-card {
+                width: 100%;
+            }
+
+            .disciplina-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#disciplina">Disciplina</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo!</h1>
+            <p>Desenvolvimento de Interfaces Web</p>
+            <a href="#projetos" class="cta-button">Ver Projetos</a>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Lab 1</h3>
+                <p>Inicio de website sobre Nova Iorque.</p>
+                <a href="lab1/index.html">Ver Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Lab 2</h3>
+                <p>Website sobre Nova Iorque mais completo.</p>
+                <a href="lab2/index.html">Ver Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Lab 3</h3>
+                <p>Website sobre Nove Iorque Concluido.</p>
+                <a href="lab3/index.html">Ver Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Lab 4</h3>
+                <p>JavaScript.</p>
+                <a href="lab4/index.html">Ver Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Lab 5</h3>
+                <p>JavaScript part 2.</p>
+                <a href="lab5/index.html">Ver Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Lab 6</h3>
+                <p>JavaScript Loja.</p>
+                <a href="lab6/index.html">Ver Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Lab 7</h3>
+                <p>JavaScript Loja Final.</p>
+                <a href="lab7/index.html">Ver Projeto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disciplina -->
+    <section id="disciplina">
+        <div class="disciplina-container">
+            <div class="disciplina-text">
+                <h2>Desenvolvimento de Interfaces Web</h2>
+                <p>
+                    Nesta disciplina exploramos as tecnologias fundamentais 
+                    para criar websites modernos.
+                </p>
+                <p><strong>Tecnologias:</strong></p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React e Next.js</li>
+                </ul>
+            </div>
+            <div class="disciplina-image">
+                <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Universidade Lusófona © 2025</p>
+    </footer>
+</body>
+</html>
