@@ -6,12 +6,8 @@
     <title>Nova Iorque - Multimédia</title>
     <link rel="stylesheet" href="NY.css"/>
     <style>
-        body {
+        body, main {
             margin: 0;
-            padding: 0;
-        }
-
-        main {
             padding: 0;
         }
 
@@ -25,24 +21,14 @@
             box-sizing: border-box;
         }
 
-        section:nth-of-type(1) {
-            background-color: #1a1a2e;
-        }
-
-        section:nth-of-type(2) {
-            background-color: #16213e;
-        }
-
-        section:nth-of-type(3) {
-            background-color: #0f3460;
-        }
-
-        section:nth-of-type(4) {
-            background-color: #e94560;
-        }
+        section:nth-of-type(1) { background: #1a1a2e; }
+        section:nth-of-type(2) { background: #16213e; }
+        section:nth-of-type(3) { background: #0f3460; }
+        section:nth-of-type(4),
+        .video-section { background: #e94560; }
 
         section h3 {
-            color: white;
+            color: #fff;
             font-size: 2.5em;
             margin-bottom: 30px;
             text-align: center;
@@ -50,7 +36,6 @@
 
         .hero-section {
             position: relative;
-            min-height: 100vh;
             padding: 0;
             overflow: hidden;
         }
@@ -59,26 +44,21 @@
             width: 100%;
             height: 100vh;
             object-fit: cover;
-            display: block;
         }
 
         .hero-text {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            inset: 50%;
             transform: translate(-50%, -50%);
-            color: white;
-            font-size: 5vw;
-            font-weight: bold;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
-            text-align: center;
             width: 90%;
-            line-height: 1.2;
+            color: #fff;
+            font: bold 5vw/1.2 sans-serif;
+            text-align: center;
+            text-shadow: 3px 3px 8px rgba(0,0,0,.8);
         }
 
         .fotografias {
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
@@ -90,15 +70,11 @@
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
-            transition: transform 0.3s ease;
+            transition: .3s;
         }
 
         .fotografias img:hover {
             transform: scale(1.1);
-        }
-
-        .video-section {
-            background-color: #533483;
         }
 
         .video-section iframe {
@@ -111,47 +87,61 @@
         .poema {
             max-width: 600px;
             margin: 20px auto;
-            font-style: italic;
-            font-size: 1.3em;
-            line-height: 1.8;
+            font: italic 1.3em/1.8 sans-serif;
         }
 
         .poema p {
             margin: 8px 0;
-            color: white;
+            color: #fff;
+            opacity: .9;
         }
 
-        .poema p:nth-child(odd) {
-            font-weight: bold;
-            opacity: 1;
-        }
+        .poema p:nth-child(odd) { font-weight: bold; opacity: 1; }
+        .poema p:nth-child(4n) { margin-bottom: 20px; }
 
-        .poema p:nth-child(even) {
-            opacity: 0.9;
-        }
-
-        .poema p:nth-child(4n) {
-            margin-bottom: 20px;
-        }
-
-        /* Links de navegação interna */
         .nav-links {
             text-align: center;
             padding: 20px;
-            background-color: #0a0a0a;
+            background: #0a0a0a;
         }
 
         .nav-links a {
-            color: white;
-            text-decoration: none;
+            color: #fff;
             margin: 0 15px;
             font-size: 1.2em;
-            transition: color 0.3s;
+            text-decoration: none;
+            transition: color .3s;
         }
 
         .nav-links a:hover {
             color: #e94560;
         }
+        @media (min-width: 768px) {
+
+    section h3 {
+        font-size: 2.5em;
+    }
+
+    .hero-text {
+        font-size: 5vw;
+    }
+
+    .fotografias {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+    }
+
+    .video-section iframe {
+        height: 60vh;
+        max-width: 1200px;
+    }
+
+    .poema {
+        max-width: 600px;
+        font-size: 1.3em;
+    }
+}
+
     </style>
 </head>
 <body>

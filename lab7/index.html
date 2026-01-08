@@ -3,35 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Online</title>
+    <title>DEISI Shop</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Loja</h1>
+        <h1>Loja DEISI</h1>
         <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#cesto">Cesto</a></li>
-            </ul>
+            <a href="#produtos">Produtos</a>
+            <a href="#cesto">Cesto</a>
         </nav>
     </header>
 
     <main>
-        <section id="produtos">
-            <h2>Selecione os seus Produtos</h2>
-            <section id="produtos-lista"></section>
+        <section class="filtros">
+            <h2>Filtros e Ordenação</h2>
+            <div class="filtros-container">
+                <div class="filtro-item">
+                    <label for="pesquisa-nome">Pesquisar:</label>
+                    <input type="text" id="pesquisa-nome" placeholder="Digite o nome do produto...">
+                </div>
+                
+                <div class="filtro-item">
+                    <label for="filtro-categoria">Categoria:</label>
+                    <select id="filtro-categoria">
+                        <option value="">Todas as categorias</option>
+                    </select>
+                </div>
+                
+                <div class="filtro-item">
+                    <label for="ordenacao-preco">Ordenar por preço:</label>
+                    <select id="ordenacao-preco">
+                        <option value="">Sem ordenação</option>
+                        <option value="asc">Preço crescente</option>
+                        <option value="desc">Preço decrescente</option>
+                    </select>
+                </div>
+            </div>
         </section>
 
-        <section id="cesto">
+        <section class="produtos" id="produtos">
+            <h2>Selecione os seus Produtos</h2>
+            <div id="produtos-lista">
+                <p>A carregar produtos...</p>
+            </div>
+        </section>
+
+        <section class="cesto" id="cesto">
             <h2>Produtos Selecionados</h2>
-            <section id="cesto-produtos"></section>
+            <div id="cesto-produtos">
+                <p>O cesto está vazio</p>
+            </div>
             <p id="total">Custo total: 0.00 €</p>
+            
+            <div class="checkout">
+                <h3>Finalizar Compra</h3>
+                
+                <div class="form-group">
+                    <label for="nome-cliente">Nome completo:</label>
+                    <input type="text" id="nome-cliente" placeholder="Seu nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="estudante">
+                        Sou estudante (desconto aplicado)
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cupom">Cupão de desconto:</label>
+                    <input type="text" id="cupom" placeholder="Digite o código do cupão">
+                </div>
+                
+                <button id="finalizar-compra">Finalizar Compra</button>
+                
+                <div id="mensagem-compra" style="display: none;"></div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>2025</p>
+        <p>DEISI Shop © 2025</p>
     </footer>
     <script src="scripts/main.js"></script>
 </body>
