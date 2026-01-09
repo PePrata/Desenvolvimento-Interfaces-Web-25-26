@@ -13,9 +13,6 @@ header {
     background-color: #7b1fa2;
     color: white;
     padding: 1.5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header h1 {
@@ -25,6 +22,7 @@ header h1 {
 nav {
     display: flex;
     gap: 2rem;
+    margin-top: 1rem;
 }
 
 nav a {
@@ -44,7 +42,7 @@ main {
     margin: 0 auto;
 }
 
-section > h2 {
+h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -57,10 +55,6 @@ section > h2 {
     margin-bottom: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.filtros h2 {
-    display: none;
 }
 
 .filtros-container {
@@ -80,20 +74,27 @@ section > h2 {
     font-weight: bold;
 }
 
-.filtro-item input,
-.filtro-item select {
+input, select {
     padding: 0.5rem;
     border: 2px solid #ddd;
     border-radius: 5px;
     min-width: 200px;
 }
 
-#produtos-lista {
+input[type="checkbox"] {
+    min-width: auto;
+    width: 18px;
+    height: 18px;
+    accent-color: #000;
+    cursor: pointer;
+}
+
+#produtos-lista, #cesto-produtos {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 article {
@@ -103,14 +104,11 @@ article {
     width: 300px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
-    display: flex;
-    flex-direction: column;
 }
 
 article h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    min-height: 60px;
     color: #333;
 }
 
@@ -118,29 +116,24 @@ article img {
     width: 200px;
     height: 200px;
     object-fit: contain;
-    margin: 0 auto 1rem auto;
+    margin: 1rem auto;
 }
 
 article p {
-    font-size: 1rem;
     margin: 0.5rem 0;
     color: #555;
-    flex-grow: 1;
 }
 
 .preco {
     font-weight: bold;
     font-size: 1.1rem;
     color: #333;
-    margin: 1rem 0;
 }
 
 .descricao {
     font-size: 0.9rem;
     font-style: italic;
     color: #666;
-    line-height: 1.4;
-    min-height: 100px;
     text-align: left;
 }
 
@@ -149,7 +142,7 @@ article p {
     color: #888;
 }
 
-article button {
+button {
     margin-top: 1rem;
     padding: 0.7rem 1.5rem;
     background-color: white;
@@ -159,8 +152,17 @@ article button {
     font-size: 1rem;
 }
 
-article button:hover {
+button:hover {
     background-color: #f0f0f0;
+}
+
+#cesto-produtos button {
+    border-color: #d32f2f;
+    color: #d32f2f;
+}
+
+#cesto-produtos button:hover {
+    background-color: #ffebee;
 }
 
 .cesto {
@@ -173,29 +175,10 @@ article button:hover {
 
 .cesto h2 {
     color: white;
-    margin-bottom: 2rem;
-}
-
-#cesto-produtos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-bottom: 2rem;
 }
 
 #cesto-produtos article {
     background-color: rgba(255, 255, 255, 0.95);
-}
-
-#cesto-produtos button {
-    background-color: white;
-    border: 2px solid #d32f2f;
-    color: #d32f2f;
-}
-
-#cesto-produtos button:hover {
-    background-color: #ffebee;
 }
 
 #total {
@@ -213,68 +196,37 @@ article button:hover {
     margin: 2rem auto 0;
 }
 
-.checkout h3 {
-    display: none;
-}
-
 .form-group {
     margin-bottom: 1.5rem;
     text-align: center;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
     font-weight: bold;
+    color: #333;
 }
 
-.form-group input[type="text"] {
-    width: 100%;
-    max-width: 400px;
-    padding: 0.7rem;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-}
-
-.form-group input[type="checkbox"] {
-    margin-right: 0.5rem;
-}
-
-#finalizar-compra {
-    width: 100%;
-    max-width: 300px;
+#calcular-total {
+    width: 300px;
     padding: 1rem;
-    background: white;
-    border: 2px solid #333;
-    border-radius: 5px;
+    font-weight: bold;
     font-size: 1.1rem;
-    cursor: pointer;
     display: block;
     margin: 1.5rem auto;
+}
+
+.total-api{
     font-weight: bold;
-}
-
-#finalizar-compra:hover {
-    background-color: #f0f0f0;
-}
-
-#mensagem-compra {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #ffffff;
     text-align: center;
 }
 
-#mensagem-compra.sucesso {
-    background: #d4edda;
-    color: #155724;
-    border: 2px solid #c3e6cb;
-}
-
-#mensagem-compra.erro {
-    background: #f8d7da;
-    color: #721c24;
-    border: 2px solid #f5c6cb;
+.referencia-api{
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-align: center;
 }
 
 footer {
@@ -283,21 +235,4 @@ footer {
     padding: 1.5rem;
     margin-top: 2rem;
     color: #666;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .filtros-container {
-        flex-direction: column;
-    }
-    
-    #produtos-lista,
-    #cesto-produtos {
-        flex-direction: column;
-        align-items: center;
-    }
 }

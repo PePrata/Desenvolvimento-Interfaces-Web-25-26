@@ -55,30 +55,32 @@
                 <p>O cesto está vazio</p>
             </div>
             <p id="total">Custo total: 0.00 €</p>
-            
             <div class="checkout">
-                <h3>Finalizar Compra</h3>
-                
                 <div class="form-group">
-                    <label for="nome-cliente">Nome completo:</label>
-                    <input type="text" id="nome-cliente" placeholder="Seu nome" required>
+                    <label>Nome:</label>
+                    <input type="text" id="nome-cliente" placeholder="O teu nome">
                 </div>
-                
+
+                <div class="form-group">
+                    <label>Cupão:</label>
+                    <input type="text" id="cupao" placeholder="Opcional">
+                </div>
+
                 <div class="form-group">
                     <label>
                         <input type="checkbox" id="estudante">
-                        Sou estudante (desconto aplicado)
+                        És estudante do DEISI?
                     </label>
                 </div>
-                
-                <div class="form-group">
-                    <label for="cupom">Cupão de desconto:</label>
-                    <input type="text" id="cupom" placeholder="Digite o código do cupão">
-                </div>
-                
-                <button id="finalizar-compra">Finalizar Compra</button>
-                
-                <div id="mensagem-compra" style="display: none;"></div>
+
+                <button id="calcular-total">Comprar</button>
+
+                <p id="total-api" class="total-api">
+                    Total final (Após descontos): --
+                </p>
+                <p id="referencia-api" class="referencia-api">
+                    Referência: --
+                </p>
             </div>
         </section>
     </main>
